@@ -1,94 +1,147 @@
 <!DOCTYPE html>
-<html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
 <head>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: black;
-            overflow: hidden;
-        }
-        .container {
-            font-size: 10px;
-            width: 40em;
-            height: 40em;
-            position: relative;
-        }
-        .sun {
-            position: absolute;
-            top: 15em;
-            left: 15em;
-            width: 10em;
-            height: 10em;
-            background-color:
-                yellow;
-            border-radius: 50%;
-            box-shadow: 0 0 3em
-                white;
-        }
-        .earth, .moon {
-            position: absolute;
-            border-style: solid;
-            border-color: white 
-                transparent
-                transparent
-                transparent;
-            border-width: 0.1em 0.1em 0 0;
-            border-radius: 50%;
-        }
-        .earth {
-            top: 5em;
-            left: 5em;
-            width: 30em;
-            height: 30em;
-            animation: orbit 36.5s 
-                linear infinite; 
-        }
-        .moon{
-            top:0;
-            right: 0;
-            width: 8em;
-            height: 8em;
-            animation: orbit 2.7s
-                linear infinite;
-        }
-        .earth::before,
-        .moon::before {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-        }
-        .earth::before {
-            top: 2.8em;
-            right: 2.8em;
-            width: 3em;
-            height: 3em;
-            background-color: aqua;
-        }
-        .moon::before {
-            top: 0.8em;
-            right: 0.2em;
-            width: 1.2em;
-            height: 1.2em;
-            background-color:
-                silver;
-        }
-        @keyframes orbit {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="teste.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+   <title>Responsive Regisration Form </title>
 </head>
 <body>
     <div class="container">
-        <div class="sun"></div>
-        <div class="earth">
-            <div class="moon"></div>
-        </div>
+        <header>Registration</header>
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Dados Pessoais</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="nome">Nome Completo: </label><br>
+                <input type="text" name="nome" size="35" placeholder="Nome Completo">
+                        </div>
+                        <div class="input-field">
+                            <label for="dt_nasc">Data de nascimento: </label><br>
+                <input type="text" name="data" size="25" placeholder="_/_/_">
+                        </div>
+                        <div class="input-field">
+                            <label for="rg">RG: </label><br>
+                            <input type="text" name="rg" size="35" placeholder="00.000.000-0">
+                        </div>
+                        <div class="input-field">
+                            <label for="cpf">CPF: </label><br>
+                        <input type="text" name="cpf" size="35" placeholder="000.000.000-00">
+                        </div>
+                        <div class="input-field">
+                            <label for="mae">Mãe: </label><br>
+                            <input type="text" name="mae" size="35" placeholder="Nome da Mãe: ">
+                        </div>
+                        <div class="input-field">
+                            <label for="pai">Pai: </label><br>
+                            <input type="text" name="pai" size="35" placeholder="Nome do Pai: ">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="details ID"> -->
+                    <span class="title">Identity Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="e-mail">e-mail: </label><br>
+                            <input type="text" name="email" size="35" placeholder="exemplo@mail.com">
+                        </div>
+                        <div class="input-field">
+                            <label for="telefone">Telefone: </label><br>
+                <input type="text" name="telefone" size="35" placeholder="(00) 00000-0000">
+                        </div>
+                    </div>
+                    <button class="nextBtn">
+                        <span class="btnText">Cadastrar</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                    <button class="limpar">
+                        <span class="limpar2">Limpar</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                <!-- </div>  -->
+            </div>
+            <!-- <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Address Type</label>
+                            <input type="text" placeholder="Permanent or Temporary" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text" placeholder="Enter nationality" required>
+                        </div>
+                        <div class="input-field">
+                            <label>State</label>
+                            <input type="text" placeholder="Enter your state" required>
+                        </div>
+                        <div class="input-field">
+                            <label>District</label>
+                            <input type="text" placeholder="Enter your district" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Block Number</label>
+                            <input type="number" placeholder="Enter block number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Ward Number</label>
+                            <input type="number" placeholder="Enter ward number" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="details family">
+                    <span class="title">Family Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Father Name</label>
+                            <input type="text" placeholder="Enter father name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Mother Name</label>
+                            <input type="text" placeholder="Enter mother name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Grandfather</label>
+                            <input type="text" placeholder="Enter grandfther name" required>
+                        </div> -->
+                        <!-- <div class="input-field">
+                            <label>Spouse Name</label>
+                            <input type="text" placeholder="Enter spouse name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Father in Law</label>
+                            <input type="text" placeholder="Father in law name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Mother in Law</label>
+                            <input type="text" placeholder="Mother in law name" required>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div> -->
+                </div> 
+            </div>
+        </form>
     </div>
+    <script src="teste.js"></script>
 </body>
 </html>

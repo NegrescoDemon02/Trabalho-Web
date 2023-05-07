@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cliente</title>
+    
+</head>
+<body>
+    <div id="form">
+        <form action="salvarcliente.php" method = "post">
+
+            <div class="data direita">
+                <label for="dt_nasc">Data de nascimento:</label><br>
+                <input type="text" name="data_nasc" size="25" placeholder="__/__/__">
+            </div>
+
+            <div class="esquerda">
+                <label for="nome">Nome completo:</label><br>
+                <input type="text" name="nome" size="35" placeholder="Nome completo">
+            </div>
+
+            <div class="esquerda">
+                <label for="rg">RG:</label>
+                <input type="text" name="rg" size="35" placeholder="00.000.000-"><br>
+            </div>
+
+            <div class="direita">
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" size="35" placeholder="000.000.00000000-0000"><br>
+            </div>
+            <div class="esquerda">
+                <label for="endereço">Endereço:</label>
+                <input type="text" name="endereco" size="35" placeholder="Endereço"><br>
+            </div>
+
+            <div class="direita">
+                <label for="estado">Estado:</label>
+                <input type="text" name="estado" size="35" placeholder="Estado"><br>
+            </div>
+
+            <div class="esquerda">
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" size="35" placeholder="exemplo@gmal.com"><br>
+            </div>
+
+            <div class="direita">
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" size="35" placeholder="(00)00000-0000"><br>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </div>
+</body>
+</html>

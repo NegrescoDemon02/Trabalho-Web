@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #cursos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(-90deg, #9a4fd3c7, #340748);
+    padding: 0 30px;
+}
+
+#cursos div {
+    text-align: center;
+}
+
+#cursos div h1 {
+    margin-bottom: 40px;
+}
+
+#cursos form {
+    width: 350px;
+    color: #2A2850;
+    background: #e9e4e458;
+    padding: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.456);
+}
+/* Botão */
+#cursos form input {
+    width: 270px;
+    margin: 10px 0;
+    padding: 9px;
+    background: #fff;
+    border-radius: 10px;
+    /* border: solid 1px #2A2850; */
+    border: solid 1px #4e0898;
+    font-size: 14px;
+}
+
+#cursos form button {
+    /* background: #2A2850; */
+    background: #7614a0;
+    width: 270px;
+    height: 55px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+
+#cursos form button:hover {
+    /* background: rgb(62, 59, 114); */
+    /* background: rgb(142, 65, 190); */
+  
+}
+
+/* footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: #fff;
+    color: #2A2850;
+    font-size: 20px;
+} */
+
+@media  (max-width: 800px) {
+    header {
+           padding: 40px 40px 0 40px;
+    }
+    /* #cursos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 650px;
+    padding: 0 30px;
+    border: #499536;
+} */
+
+#cursos, #formulario div {
+    text-align: center;
+}
+
+#cursos div h1 {
+    margin-bottom: 40px;
+}
+
+#cursos,#formulario  form {
+    width: 350px;
+    color: #2A2850;
+    background: #07ffa0;
+    padding: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.456);
+}
+
+    /* nav ul li {
+           padding: 0 100px;
+           list-style: none;
+           font-size: 18px;
+    } */
+/* 
+    #inicio {
+            padding: 10px 40px;
+    }
+    
+    #inicio div{
+           padding-right: 0px;
+    }
+    #inicio img {
+           display: none;
+    } */
+
+    #esquerda, #direita, #formulario{
+           display: flex;
+           flex-direction: column;
+           /* height: 800px; */
+           /* padding: 40px 0px; */
+    }
+
+    #cursos div {
+           display: none;
+    }
+}
+
+</style>
+<body>
+    <section id="cursos">
+    
+     <!-- Cadastro -->
+
+        <form action="POST">
+            <div id="formulario">
+                <form action="salvarfunction.php" method="post">
+                    <div class="data direita">
+                        <label for="dt_nasc">Data de nascimento: </label><br>
+                        <input type="text" name="data" size="25" placeholder="_/_/_">
+                    </div>
+        
+                    <div class="esquerda">
+                        <label for="nome">Nome Completo: </label><br>
+                        <input type="text" name="nome" size="35" placeholder="Nome Completo">
+                    </div>
+        
+        
+                    <div class="esquerda">
+                        <label for="rg">RG: </label><br>
+                        <input type="text" name="rg" size="35" placeholder="00.000.000-0">
+                    </div>
+        
+                    <div class="direita">
+                        <label for="cpf">CPF: </label><br>
+                        <input type="text" name="cpf" size="35" placeholder="000.000.000-00">
+                    </div>
+        
+                    <!-- PAIS - telefone e email -->
+        
+                    <div class="esquerda">
+                        <label for="pai">Pai: </label><br>
+                        <input type="text" name="pai" size="35" placeholder="Nome nome do Pai: ">
+                    </div>
+        
+                    <div class="direita">
+                        <label for="mae">Mãe: </label><br>
+                        <input type="text" name="mae" size="35" placeholder="Nome da Mãe: ">
+                    </div>
+        
+                    <div class="esquerda">
+                        <label for="e-mail">e-mail: </label><br>
+                        <input type="text" name="email" size="35" placeholder="exemplo@mail.com">
+                    </div> 
+        
+                    <div class="direita">
+                        <label for="telefone">Telefone: </label><br>
+                        <input type="text" name="telefone" size="35" placeholder="(00) 00000-0000">
+                    </div>
+                    <br>
+                    <button type="submit">Cadastrar</button>
+                    <button type="reset">Limpar</button>
+                </form>
+            </div>
+    </section>
+</body>
+</html>
